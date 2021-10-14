@@ -20,13 +20,13 @@ namespace pz_8
             {
                 if (a[i] % 2 == 0)
                 {
-                    k ++ ;
+                    k = k+1 ;
                     Console.Write(a [i]);
                     Console.Write(" ");
                 }
             }
             Console.WriteLine("Количество чётных чисел: ");
-            Console.WriteLine(k);
+            Console.WriteLine(k); 
         }
     }
 }
