@@ -20,7 +20,7 @@ namespace pz_8
             {
                 if (a[i] % 2 == 0)
                 {
-                    k = k + 1 ;
+                    k ++ ;
                     Console.Write(a [i]);
                     Console.Write(" ");
                 }
