@@ -14,7 +14,7 @@ namespace pz_5
                 }
             }
             {
-                Console.WriteLine("zadanie 2");
+                Console.WriteLine("задание 2");
                 for (int i = 0; i < 6; i += 1)
                 {
                     Console.Write($"{(char)(i + 'N')}\t");
@@ -35,10 +35,11 @@ namespace pz_5
                             Console.WriteLine("zadanie 5");
                             for (int i = 4, j = 50; Math.Abs(i - j) != 22; i++, j--)
                             {
-                                Console.WriteLine("{0} {1}", i, j);
+                                Console.WriteLine("{1} {0}", i, j);
                             }
                         }
                     }
+
                 }
             }
             
