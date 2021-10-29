@@ -6,36 +6,44 @@ namespace pz_9
     {
         static void Main(string[] args)
         {
-            int x, y, z;
-            x = y = z = 0;
-            int[,] a = new int[8, 6];
-            int[] b = new int[48];
-            Random q = new Random();
-            for (int i = 0; i != 8; i++)
+            float[,] arr = new float[8, 6];
+            float minValue;
+            float sumPositive = 0;
+            Random rand = new Random();
+
+            for (int y = 0; y < arr.GetLength(1); y++)
             {
-                for (int j = 0; j != 6; j++)
+                for (int x = 0; x < arr.GetLength(0); x++)
                 {
-                    a[i, j] = q.Next(int.MinValue, int.MaxValue);
-                    Console.Write($"{a[i, j]} \t");
-                    if (a[i, j] > 0)
-                    {
-                        b[x] = a[i, j];
-                        x++;
-                    }
-                    else if (a[i, j] < z)
-                    {
-                        z = a[i, j];
-                    }
+                    arr[x, y] = rand.Next(-99, 100);
+                    Console.Write(arr[x, y] + "\t");
                 }
                 Console.WriteLine();
             }
-            while (x != 0)
+            Console.WriteLine();
+
+
+            minValue = arr[0, 0];
+            for (int y = 0; y < arr.GetLength(1); y++)
             {
-                y += b[x];
-                x--;
+                for (int x = 0; x < arr.GetLength(0); x++)
+                {
+                    if (arr[x, y] < minValue)
+                    {
+                        minValue = arr[x, y];
+                    }
+
+                    if (arr[x, y] > 0)
+                    {
+                        sumPositive += arr[x, y];
+                    }
+                }
             }
-            Console.WriteLine($"Ответ: {y * z}");
-            Console.ReadLine();
+
+            Console.WriteLine($"Наименьшее число матрицы {minValue}");
+            Console.WriteLine($"Сумма положительных чисел равна {sumPositive}");
+            Console.WriteLine($"Произведение наименьшего числа на сумму положительных равно {minValue * sumPositive}");
         }
     }
 }
+
