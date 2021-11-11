@@ -11,7 +11,7 @@ namespace pz_text.stroki
                 {
                     for (int k = i + 1; k < str.Length; k++)
                     {
-                        if (str[i].Length > str[k].Length)
+                        if (str[i].Length < str[k].Length)
                         {
                             temp = str[i];
                             str[i] = str[k];
