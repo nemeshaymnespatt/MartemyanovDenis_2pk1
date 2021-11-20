@@ -6,36 +6,36 @@ namespace pz_9
     {
         static void Main(string[] args)
         {
-            float[,] arr = new float[8, 6];
+            float[,] arr1 = new float[8, 6];
             float minValue;
             float sumPositive = 0;
             Random rand = new Random();
 
-            for (int y = 0; y < arr.GetLength(1); y++)
+            for (int y = 0; y < arr1.GetLength(1); y++)
             {
-                for (int x = 0; x < arr.GetLength(0); x++)
+                for (int x = 0; x < arr1.GetLength(0); x++)
                 {
-                    arr[x, y] = rand.Next(-99, 100);
-                    Console.Write(arr[x, y] + "\t");
+                    arr1[x, y] = rand.Next(-99, 100);
+                    Console.Write(arr1[x, y] + "\t");
                 }
                 Console.WriteLine();
             }
             Console.WriteLine();
 
 
-            minValue = arr[0, 0];
-            for (int y = 0; y < arr.GetLength(1); y++)
+            minValue = arr1[0, 0];
+            for (int y = 0; y < arr1.GetLength(1); y++)
             {
-                for (int x = 0; x < arr.GetLength(0); x++)
+                for (int x = 0; x < arr1.GetLength(0); x++)
                 {
-                    if (arr[x, y] < minValue)
+                    if (arr1[x, y] < minValue)
                     {
-                        minValue = arr[x, y];
+                        minValue = arr1[x, y];
                     }
 
-                    if (arr[x, y] > 0)
+                    if (arr1[x, y] > 0)
                     {
-                        sumPositive += arr[x, y];
+                        sumPositive += arr1[x, y];
                     }
                 }
             }
