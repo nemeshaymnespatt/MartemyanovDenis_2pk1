@@ -6,8 +6,9 @@ namespace pz_11
     {
         static void Main(string[] args)
         {
-            string S = "This is a test";
-            Char C = 's';
+            string S = Console.ReadLine();
+            string b = Console.ReadLine();
+            Char C = Convert.ToChar(b);
             string result = S.Replace("" + C, "" + C + C);
             Console.WriteLine(result);
 
