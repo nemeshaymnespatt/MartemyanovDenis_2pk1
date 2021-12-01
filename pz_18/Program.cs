@@ -32,12 +32,12 @@ namespace pz_18
             return z3(A, B);
         }
         //Задание 4
-        static int cheslo(int x, int e)
+        static int ches(int x, int e)
         {
             if (x < 0) { Console.WriteLine("Ошибка!"); return 0; }
             if (x == 0) { Console.WriteLine(0); return 0; }
             if (x == 1) { Console.WriteLine($"Сумма чисел = {e + 1 } "); }
-            else { e = e + x; x = x - 1; return cheslo(x, e); }
+            else { e = e + x; x = x - 1; return ches(x, e); }
             return 1;
         }
 
@@ -53,7 +53,7 @@ namespace pz_18
             z3(22, 100);
             Console.Write("задание №4:");
             n = Convert.ToInt32(Console.ReadLine());
-            cheslo(n, 0);
+            ches(n, 0);
         }
     }
 }
